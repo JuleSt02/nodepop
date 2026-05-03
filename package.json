@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/bin/www.js",
-    "start": "node src/bin/www.js"
+    "dev": "node --watch --env-file=.env src/bin/www.js",
+    "start": "node src/bin/www.js",
+    "seed:database": "node --env-file=.env src/scripts/seed-db.js"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-mongo": "^6.0.0",
     "dotenv": "^17.4.2",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
+    "express-session": "^1.19.0",
     "mongodb": "^7.1.1",
     "mongoose": "^9.4.1",
     "morgan": "^1.10.1"

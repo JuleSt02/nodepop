@@ -1,0 +1,37 @@
+<%- include('partials/page-start.html') %>
+
+
+  <h1><%= title %></h1>
+  <section class ="login-section">
+  <form method="POST" action="/login">
+    <label for="email">e-mail</label>
+      <!-- without value the input would be blank after re-rendering, with value
+       the server can refill the field -->
+        <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="email@example.org"
+        
+        value="<%= values.email ?? '' %>"
+          >
+    <label for="password">password</label>
+      <!-- without value the input would be blank after re-rendering, with value
+      the server can refill the field -->
+        <input
+        type="password"
+        id="password"
+        name="password"
+        
+    
+        >
+    <button type="submit">Login</button>
+
+
+  </form>
+</section>
+
+
+<%- include('partials/page-end.html') %>
+</body>
+</html>
