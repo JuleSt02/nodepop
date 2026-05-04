@@ -103,6 +103,7 @@ export function validatePaginationData(rawLimit, rawPage) {
     const skip = (page - 1) * limit 
     paginationData.limit = limit
     paginationData.skip = skip
+    paginationData.page = page
     return paginationData 
 
     };

@@ -44,15 +44,23 @@
   <ul class="pagination">
 
     <li class="page-item">
-      <a class="page-link" href="/products?page=1&limit=3">1</a>
+      <a class="page-link"
+         href="/products?page=<%= paginationData.page - 1 %>&limit=<%= paginationData.limit %>">
+        Previous
+      </a>
     </li>
 
     <li class="page-item">
-      <a class="page-link" href="/products?page=2&limit=3">2</a>
+      <span class="page-link">
+        Page <%= paginationData.page %>
+      </span>
     </li>
 
     <li class="page-item">
-      <a class="page-link" href="/products?page=3&limit=3">3</a>
+      <a class="page-link"
+         href="/products?page=<%= paginationData.page + 1 %>&limit=<%= paginationData.limit %>">
+        Next
+      </a>
     </li>
 
   </ul>

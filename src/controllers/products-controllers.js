@@ -49,7 +49,9 @@ import {Product} from '../models/product-model.js'
     return res.render('products.html', {
     title: title,
     allProducts:productsByUserWithFilters,
-    errorMessage:errorMessage 
+    errorMessage:errorMessage ,
+    paginationData: paginationData
+
 
 
  });
